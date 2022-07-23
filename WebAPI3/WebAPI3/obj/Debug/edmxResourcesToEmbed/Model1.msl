@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EcommerDBModelStoreContainer" CdmEntityContainer="EcommerDBEntities">
+    <EntitySetMapping Name="AnneBOTable">
+      <EntityTypeMapping TypeName="EcommerDBModel.AnneBOTable">
+        <MappingFragment StoreEntitySet="AnneBOTable">
+          <ScalarProperty Name="AnnePID" ColumnName="AnnePID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="AProductName" ColumnName="AProductName" />
+          <ScalarProperty Name="SubCategoriesID" ColumnName="SubCategoriesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CartTable">
+      <EntityTypeMapping TypeName="EcommerDBModel.CartTable">
+        <MappingFragment StoreEntitySet="CartTable">
+          <ScalarProperty Name="CartID" ColumnName="CartID" />
+          <ScalarProperty Name="FirebaseID" ColumnName="FirebaseID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+          <ScalarProperty Name="ProductsIDS" ColumnName="ProductsIDS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Category_Table">
+      <EntityTypeMapping TypeName="EcommerDBModel.Category_Table">
+        <MappingFragment StoreEntitySet="Category_Table">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommentTable">
+      <EntityTypeMapping TypeName="EcommerDBModel.CommentTable">
+        <MappingFragment StoreEntitySet="CommentTable">
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CommentDate" ColumnName="CommentDate" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Point" ColumnName="Point" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerTable">
+      <EntityTypeMapping TypeName="EcommerDBModel.CustomerTable">
+        <MappingFragment StoreEntitySet="CustomerTable">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerSurname" ColumnName="CustomerSurname" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ElectronicPTable">
+      <EntityTypeMapping TypeName="EcommerDBModel.ElectronicPTable">
+        <MappingFragment StoreEntitySet="ElectronicPTable">
+          <ScalarProperty Name="ElectronicPID" ColumnName="ElectronicPID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="EProductName" ColumnName="EProductName" />
+          <ScalarProperty Name="SubCategoriesID" ColumnName="SubCategoriesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EvYKOPTable">
+      <EntityTypeMapping TypeName="EcommerDBModel.EvYKOPTable">
+        <MappingFragment StoreEntitySet="EvYKOPTable">
+          <ScalarProperty Name="EvPID" ColumnName="EvPID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="EProductName" ColumnName="EProductName" />
+          <ScalarProperty Name="SubCategoriesID" ColumnName="SubCategoriesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KitapMFHTable">
+      <EntityTypeMapping TypeName="EcommerDBModel.KitapMFHTable">
+        <MappingFragment StoreEntitySet="KitapMFHTable">
+          <ScalarProperty Name="KitapPID" ColumnName="KitapPID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="KiProductName" ColumnName="KiProductName" />
+          <ScalarProperty Name="SubCategoriesID" ColumnName="SubCategoriesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KozmetikKTable">
+      <EntityTypeMapping TypeName="EcommerDBModel.KozmetikKTable">
+        <MappingFragment StoreEntitySet="KozmetikKTable">
+          <ScalarProperty Name="KozmetikPID" ColumnName="KozmetikPID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="KoProductName" ColumnName="KoProductName" />
+          <ScalarProperty Name="SubCategoriesID" ColumnName="SubCategoriesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModaPTable">
+      <EntityTypeMapping TypeName="EcommerDBModel.ModaPTable">
+        <MappingFragment StoreEntitySet="ModaPTable">
+          <ScalarProperty Name="ModaPID" ColumnName="ModaPID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="MProductName" ColumnName="MProductName" />
+          <ScalarProperty Name="SubCategoriesID" ColumnName="SubCategoriesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrdersTable">
+      <EntityTypeMapping TypeName="EcommerDBModel.OrdersTable">
+        <MappingFragment StoreEntitySet="OrdersTable">
+          <ScalarProperty Name="OrdersID" ColumnName="OrdersID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="CartID" ColumnName="CartID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OtoBYMTable">
+      <EntityTypeMapping TypeName="EcommerDBModel.OtoBYMTable">
+        <MappingFragment StoreEntitySet="OtoBYMTable">
+          <ScalarProperty Name="OtoPID" ColumnName="OtoPID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OProductName" ColumnName="OProductName" />
+          <ScalarProperty Name="SubCategoriesID" ColumnName="SubCategoriesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentTable">
+      <EntityTypeMapping TypeName="EcommerDBModel.PaymentTable">
+        <MappingFragment StoreEntitySet="PaymentTable">
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="Allowed" ColumnName="Allowed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_Table">
+      <EntityTypeMapping TypeName="EcommerDBModel.Product_Table">
+        <MappingFragment StoreEntitySet="Product_Table">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="ProductInfoID" ColumnName="ProductInfoID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+          <ScalarProperty Name="PhotoUrl" ColumnName="PhotoUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductInfo">
+      <EntityTypeMapping TypeName="EcommerDBModel.ProductInfo">
+        <MappingFragment StoreEntitySet="ProductInfo">
+          <ScalarProperty Name="ProductInfoID" ColumnName="ProductInfoID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SporOTable">
+      <EntityTypeMapping TypeName="EcommerDBModel.SporOTable">
+        <MappingFragment StoreEntitySet="SporOTable">
+          <ScalarProperty Name="SporPID" ColumnName="SporPID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="SProductName" ColumnName="SProductName" />
+          <ScalarProperty Name="SubCategoriesID" ColumnName="SubCategoriesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubCategoriesTable">
+      <EntityTypeMapping TypeName="EcommerDBModel.SubCategoriesTable">
+        <MappingFragment StoreEntitySet="SubCategoriesTable">
+          <ScalarProperty Name="SubCategoriesID" ColumnName="SubCategoriesID" />
+          <ScalarProperty Name="SubCategoriesName" ColumnName="SubCategoriesName" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupermarketPKTable">
+      <EntityTypeMapping TypeName="EcommerDBModel.SupermarketPKTable">
+        <MappingFragment StoreEntitySet="SupermarketPKTable">
+          <ScalarProperty Name="superPID" ColumnName="superPID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="SProductName" ColumnName="SProductName" />
+          <ScalarProperty Name="SubCategoriesID" ColumnName="SubCategoriesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="EcommerDBModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

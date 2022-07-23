@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EcommerDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AnneBOTable">
+    <Key>
+      <PropertyRef Name="AnnePID" />
+    </Key>
+    <Property Name="AnnePID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="AProductName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="SubCategoriesID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CartTable">
+    <Key>
+      <PropertyRef Name="CartID" />
+    </Key>
+    <Property Name="CartID" Type="int" Nullable="false" />
+    <Property Name="FirebaseID" Type="bigint" Nullable="false" />
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="PaymentID" Type="int" Nullable="false" />
+    <Property Name="ProductsIDS" Type="nchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Category_Table">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="nchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CommentTable">
+    <Key>
+      <PropertyRef Name="CommentID" />
+    </Key>
+    <Property Name="CommentID" Type="int" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="CommentDate" Type="datetime" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="Point" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustomerTable">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CustomerSurname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="Gender" Type="nchar" MaxLength="5" Nullable="false" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ElectronicPTable">
+    <Key>
+      <PropertyRef Name="ElectronicPID" />
+    </Key>
+    <Property Name="ElectronicPID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="EProductName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="SubCategoriesID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EvYKOPTable">
+    <Key>
+      <PropertyRef Name="EvPID" />
+    </Key>
+    <Property Name="EvPID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="EProductName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="SubCategoriesID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KitapMFHTable">
+    <Key>
+      <PropertyRef Name="KitapPID" />
+    </Key>
+    <Property Name="KitapPID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="KiProductName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="SubCategoriesID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KozmetikKTable">
+    <Key>
+      <PropertyRef Name="KozmetikPID" />
+    </Key>
+    <Property Name="KozmetikPID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="KoProductName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="SubCategoriesID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ModaPTable">
+    <Key>
+      <PropertyRef Name="ModaPID" />
+    </Key>
+    <Property Name="ModaPID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="MProductName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="SubCategoriesID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrdersTable">
+    <Key>
+      <PropertyRef Name="OrdersID" />
+    </Key>
+    <Property Name="OrdersID" Type="int" Nullable="false" />
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="CartID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OtoBYMTable">
+    <Key>
+      <PropertyRef Name="OtoPID" />
+    </Key>
+    <Property Name="OtoPID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="OProductName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="SubCategoriesID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PaymentTable">
+    <Key>
+      <PropertyRef Name="PaymentID" />
+    </Key>
+    <Property Name="PaymentID" Type="int" Nullable="false" />
+    <Property Name="PaymentType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Allowed" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product_Table">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Stock" Type="int" />
+    <Property Name="ProductInfoID" Type="int" Nullable="false" />
+    <Property Name="Price" Type="money" Nullable="false" />
+    <Property Name="Mark" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CategoryID" Type="smallint" Nullable="false" />
+    <Property Name="CommentID" Type="int" Nullable="false" />
+    <Property Name="PhotoUrl" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ProductInfo">
+    <Key>
+      <PropertyRef Name="ProductInfoID" />
+    </Key>
+    <Property Name="ProductInfoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="Info" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SporOTable">
+    <Key>
+      <PropertyRef Name="SporPID" />
+    </Key>
+    <Property Name="SporPID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="SProductName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="SubCategoriesID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SubCategoriesTable">
+    <Key>
+      <PropertyRef Name="SubCategoriesID" />
+    </Key>
+    <Property Name="SubCategoriesID" Type="int" Nullable="false" />
+    <Property Name="SubCategoriesName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CategoryID" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SupermarketPKTable">
+    <Key>
+      <PropertyRef Name="superPID" />
+    </Key>
+    <Property Name="superPID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="SProductName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="SubCategoriesID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="AnneBOTable_fk0">
+    <End Role="Product_Table" Type="Self.Product_Table" Multiplicity="1" />
+    <End Role="AnneBOTable" Type="Self.AnneBOTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_Table">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="AnneBOTable">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CartTable_fk0">
+    <End Role="CustomerTable" Type="Self.CustomerTable" Multiplicity="1" />
+    <End Role="CartTable" Type="Self.CartTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerTable">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="CartTable">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CartTable_fk1">
+    <End Role="PaymentTable" Type="Self.PaymentTable" Multiplicity="1" />
+    <End Role="CartTable" Type="Self.CartTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentTable">
+        <PropertyRef Name="PaymentID" />
+      </Principal>
+      <Dependent Role="CartTable">
+        <PropertyRef Name="PaymentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ElectronicPTable_fk1">
+    <End Role="SubCategoriesTable" Type="Self.SubCategoriesTable" Multiplicity="1" />
+    <End Role="ElectronicPTable" Type="Self.ElectronicPTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubCategoriesTable">
+        <PropertyRef Name="SubCategoriesID" />
+      </Principal>
+      <Dependent Role="ElectronicPTable">
+        <PropertyRef Name="SubCategoriesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EvYKOPTable_fk0">
+    <End Role="Product_Table" Type="Self.Product_Table" Multiplicity="1" />
+    <End Role="EvYKOPTable" Type="Self.EvYKOPTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_Table">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="EvYKOPTable">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="KitapMFHTable_fk0">
+    <End Role="Product_Table" Type="Self.Product_Table" Multiplicity="1" />
+    <End Role="KitapMFHTable" Type="Self.KitapMFHTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_Table">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="KitapMFHTable">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="KozmetikKTable_fk0">
+    <End Role="Product_Table" Type="Self.Product_Table" Multiplicity="1" />
+    <End Role="KozmetikKTable" Type="Self.KozmetikKTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_Table">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="KozmetikKTable">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ModaPTable_fk0">
+    <End Role="Product_Table" Type="Self.Product_Table" Multiplicity="1" />
+    <End Role="ModaPTable" Type="Self.ModaPTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_Table">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="ModaPTable">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OrdersTable_fk1">
+    <End Role="Product_Table" Type="Self.Product_Table" Multiplicity="1" />
+    <End Role="OrdersTable" Type="Self.OrdersTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_Table">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="OrdersTable">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OtoBYMTable_fk0">
+    <End Role="Product_Table" Type="Self.Product_Table" Multiplicity="1" />
+    <End Role="OtoBYMTable" Type="Self.OtoBYMTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_Table">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="OtoBYMTable">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Product_Table_fk0">
+    <End Role="ProductInfo" Type="Self.ProductInfo" Multiplicity="1" />
+    <End Role="Product_Table" Type="Self.Product_Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductInfo">
+        <PropertyRef Name="ProductInfoID" />
+      </Principal>
+      <Dependent Role="Product_Table">
+        <PropertyRef Name="ProductInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Product_Table_fk1">
+    <End Role="Category_Table" Type="Self.Category_Table" Multiplicity="1" />
+    <End Role="Product_Table" Type="Self.Product_Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category_Table">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Product_Table">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Product_Table_fk2">
+    <End Role="CommentTable" Type="Self.CommentTable" Multiplicity="1" />
+    <End Role="Product_Table" Type="Self.Product_Table" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CommentTable">
+        <PropertyRef Name="CommentID" />
+      </Principal>
+      <Dependent Role="Product_Table">
+        <PropertyRef Name="CommentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SporOTable_fk0">
+    <End Role="Product_Table" Type="Self.Product_Table" Multiplicity="1" />
+    <End Role="SporOTable" Type="Self.SporOTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_Table">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="SporOTable">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SubCategoriesTable_fk0">
+    <End Role="Category_Table" Type="Self.Category_Table" Multiplicity="1" />
+    <End Role="SubCategoriesTable" Type="Self.SubCategoriesTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category_Table">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="SubCategoriesTable">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SupermarketPKTable_fk0">
+    <End Role="Product_Table" Type="Self.Product_Table" Multiplicity="1" />
+    <End Role="SupermarketPKTable" Type="Self.SupermarketPKTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_Table">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="SupermarketPKTable">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EcommerDBModelStoreContainer">
+    <EntitySet Name="AnneBOTable" EntityType="Self.AnneBOTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CartTable" EntityType="Self.CartTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category_Table" EntityType="Self.Category_Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CommentTable" EntityType="Self.CommentTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerTable" EntityType="Self.CustomerTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ElectronicPTable" EntityType="Self.ElectronicPTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EvYKOPTable" EntityType="Self.EvYKOPTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KitapMFHTable" EntityType="Self.KitapMFHTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KozmetikKTable" EntityType="Self.KozmetikKTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModaPTable" EntityType="Self.ModaPTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrdersTable" EntityType="Self.OrdersTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OtoBYMTable" EntityType="Self.OtoBYMTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentTable" EntityType="Self.PaymentTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product_Table" EntityType="Self.Product_Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductInfo" EntityType="Self.ProductInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SporOTable" EntityType="Self.SporOTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubCategoriesTable" EntityType="Self.SubCategoriesTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SupermarketPKTable" EntityType="Self.SupermarketPKTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="AnneBOTable_fk0" Association="Self.AnneBOTable_fk0">
+      <End Role="Product_Table" EntitySet="Product_Table" />
+      <End Role="AnneBOTable" EntitySet="AnneBOTable" />
+    </AssociationSet>
+    <AssociationSet Name="CartTable_fk0" Association="Self.CartTable_fk0">
+      <End Role="CustomerTable" EntitySet="CustomerTable" />
+      <End Role="CartTable" EntitySet="CartTable" />
+    </AssociationSet>
+    <AssociationSet Name="CartTable_fk1" Association="Self.CartTable_fk1">
+      <End Role="PaymentTable" EntitySet="PaymentTable" />
+      <End Role="CartTable" EntitySet="CartTable" />
+    </AssociationSet>
+    <AssociationSet Name="ElectronicPTable_fk1" Association="Self.ElectronicPTable_fk1">
+      <End Role="SubCategoriesTable" EntitySet="SubCategoriesTable" />
+      <End Role="ElectronicPTable" EntitySet="ElectronicPTable" />
+    </AssociationSet>
+    <AssociationSet Name="EvYKOPTable_fk0" Association="Self.EvYKOPTable_fk0">
+      <End Role="Product_Table" EntitySet="Product_Table" />
+      <End Role="EvYKOPTable" EntitySet="EvYKOPTable" />
+    </AssociationSet>
+    <AssociationSet Name="KitapMFHTable_fk0" Association="Self.KitapMFHTable_fk0">
+      <End Role="Product_Table" EntitySet="Product_Table" />
+      <End Role="KitapMFHTable" EntitySet="KitapMFHTable" />
+    </AssociationSet>
+    <AssociationSet Name="KozmetikKTable_fk0" Association="Self.KozmetikKTable_fk0">
+      <End Role="Product_Table" EntitySet="Product_Table" />
+      <End Role="KozmetikKTable" EntitySet="KozmetikKTable" />
+    </AssociationSet>
+    <AssociationSet Name="ModaPTable_fk0" Association="Self.ModaPTable_fk0">
+      <End Role="Product_Table" EntitySet="Product_Table" />
+      <End Role="ModaPTable" EntitySet="ModaPTable" />
+    </AssociationSet>
+    <AssociationSet Name="OrdersTable_fk1" Association="Self.OrdersTable_fk1">
+      <End Role="Product_Table" EntitySet="Product_Table" />
+      <End Role="OrdersTable" EntitySet="OrdersTable" />
+    </AssociationSet>
+    <AssociationSet Name="OtoBYMTable_fk0" Association="Self.OtoBYMTable_fk0">
+      <End Role="Product_Table" EntitySet="Product_Table" />
+      <End Role="OtoBYMTable" EntitySet="OtoBYMTable" />
+    </AssociationSet>
+    <AssociationSet Name="Product_Table_fk0" Association="Self.Product_Table_fk0">
+      <End Role="ProductInfo" EntitySet="ProductInfo" />
+      <End Role="Product_Table" EntitySet="Product_Table" />
+    </AssociationSet>
+    <AssociationSet Name="Product_Table_fk1" Association="Self.Product_Table_fk1">
+      <End Role="Category_Table" EntitySet="Category_Table" />
+      <End Role="Product_Table" EntitySet="Product_Table" />
+    </AssociationSet>
+    <AssociationSet Name="Product_Table_fk2" Association="Self.Product_Table_fk2">
+      <End Role="CommentTable" EntitySet="CommentTable" />
+      <End Role="Product_Table" EntitySet="Product_Table" />
+    </AssociationSet>
+    <AssociationSet Name="SporOTable_fk0" Association="Self.SporOTable_fk0">
+      <End Role="Product_Table" EntitySet="Product_Table" />
+      <End Role="SporOTable" EntitySet="SporOTable" />
+    </AssociationSet>
+    <AssociationSet Name="SubCategoriesTable_fk0" Association="Self.SubCategoriesTable_fk0">
+      <End Role="Category_Table" EntitySet="Category_Table" />
+      <End Role="SubCategoriesTable" EntitySet="SubCategoriesTable" />
+    </AssociationSet>
+    <AssociationSet Name="SupermarketPKTable_fk0" Association="Self.SupermarketPKTable_fk0">
+      <End Role="Product_Table" EntitySet="Product_Table" />
+      <End Role="SupermarketPKTable" EntitySet="SupermarketPKTable" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
